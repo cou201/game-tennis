@@ -11,7 +11,6 @@ function App() {
 
 
 
-
   function handleAnswerSubmit(isCorrect, e) {
     // añadir puntuación
     if (isCorrect) setPuntuación(puntuación + 1);
