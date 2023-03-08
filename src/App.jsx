@@ -46,7 +46,7 @@ function App() {
               <span>
                 {" "}
                 Obtuviste {puntuación} de {preguntasDieselTrivia.length}{" "}            
-              </span><h4>cupon:DFEP5%</h4>
+              </span><h4>cupon:DFEP5</h4>
               <p className="tyc-juego-diesel">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae alias ipsam laudantium repellat id!</p>
               <button onClick={() => (window.location.href = "/")}>
                 {" "}
