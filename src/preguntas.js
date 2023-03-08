@@ -91,5 +91,4 @@ const preguntasDieselTrivia = [
     },
 ]
 
-
 export default preguntasDieselTrivia

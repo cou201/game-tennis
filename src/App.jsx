@@ -36,43 +36,113 @@ function App() {
 
     return () => clearInterval(intervalo);
   }, [tiempoRestante]);
-  // const puntuacionCorrecto = function(){
-  //   if(puntuacionCorrecto <= 3){
-  //     return console.log("Correcto")
-  //   }else if (puntuacionCorrecto >= 3){
-  //       return console.log("Incorrecto")
-      
-  //   }
-  //  }
 
-
-  if (isFinished){
-  return (
-      <main className="app">
-        <div className="juego-terminado">
-          <span>
-            {" "}
-            Obtuviste {puntuación} de {preguntasDieselTrivia.length}{" "}            
-          </span><h4>Cupon:diesel</h4>
-          <button onClick={() => (window.location.href = "/")}>
-            {" "}
-            Volver a jugar
-          </button>
-          <button
-            onClick={() => {
-              setIsFinished(false);
-              setAnswersShown(true);
-              setPreguntaActual(0);
-            }}
-          >
-            Ver respuestas
-          </button>
-        </div>
-      </main>
-    );
+  var puntiacionuno = puntuación
+  if(puntiacionuno <= 3){
+    if (isFinished){
+      return (
+          <main className="app">
+            <div className="juego-terminado">
+              <span>
+                {" "}
+                Obtuviste {puntuación} de {preguntasDieselTrivia.length}{" "}            
+              </span><h4>cupon:DFEP5%</h4>
+              <p className="tyc-juego-diesel">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae alias ipsam laudantium repellat id!</p>
+              <button onClick={() => (window.location.href = "/")}>
+                {" "}
+                Volver a jugar
+              </button>
+          
+            </div>
+          </main>
+        );
+      }
   }
-  
 
+  var puntiacionDos = puntuación
+  if(puntiacionDos >= 3 && puntiacionDos <= 5){
+    if (isFinished){
+      return (
+          <main className="app">
+            <div className="juego-terminado">
+              <span>
+                {" "}
+                Obtuviste {puntuación} de {preguntasDieselTrivia.length}{" "}            
+              </span><h4>Cupon:DFEP4</h4>
+              <p className="tyc-juego-diesel">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae alias ipsam laudantium repellat id!</p>
+              <button onClick={() => (window.location.href = "/")}>
+                {" "}
+                Volver a jugar
+              </button>
+        
+            </div>
+          </main>
+        );
+      }  
+  }
+  var puntiacionTres = puntuación
+  if(puntiacionTres >= 6 && puntiacionDos <= 7){
+    if (isFinished){
+      return (
+          <main className="app">
+            <div className="juego-terminado">
+              <span>
+                {" "}
+                Obtuviste {puntuación} de {preguntasDieselTrivia.length}{" "}            
+              </span><h4>Cupon:DFEP3</h4>
+              <p className="tyc-juego-diesel">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae alias ipsam laudantium repellat id!.</p>
+              <button onClick={() => (window.location.href = "/")}>
+                {" "}
+                Volver a jugar
+              </button>
+      
+            </div>
+          </main>
+        );
+      }  
+  }
+  var puntiacionCuatro = puntuación
+  if(puntiacionCuatro >= 8 && puntiacionCuatro <= 9){
+    if (isFinished){
+      return (
+          <main className="app">
+            <div className="juego-terminado">
+              <span>
+                {" "}
+                Obtuviste {puntuación} de {preguntasDieselTrivia.length}{" "}            
+              </span><h4>Cupon:DFEP2</h4>
+              <p className="tyc-juego-diesel">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae alias ipsam laudantium repellat id!</p>
+              <button onClick={() => (window.location.href = "/")}>
+                {" "}
+                Volver a jugar
+              </button>
+           
+            </div>
+          </main>
+        );
+      }  
+  }
+  var puntiacionDiez = puntuación
+  if(puntiacionDiez  === 10){
+    if (isFinished){
+      return (
+          <main className="app">
+            <div className="juego-terminado">
+              <span>
+                {" "}
+                Obtuviste {puntuación} de {preguntasDieselTrivia.length}{" "}            
+              </span><h4>Cupon:DFEP1</h4>
+              <p className="tyc-juego-diesel">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae alias ipsam laudantium repellat id!</p>
+              <button onClick={() => (window.location.href = "/")}>
+                {" "}
+                Volver a jugar
+              </button>
+             
+            </div>
+          </main>
+        );
+      }  
+  }
   if (answersShown)
     return (
       <main className="app">

@@ -11,7 +11,9 @@
     align-items: center;
     min-height: 100vh;
   }
-  
+  .tyc-juego-diesel{
+    text-align: center;
+  }
   .app {
     background-color: #252d4a;
     max-width: 650px;
