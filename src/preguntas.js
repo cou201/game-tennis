@@ -36,12 +36,13 @@ const preguntasDieselTrivia = [
         ],
     },
     {
-        titulo:"Nuestro pilar OTB representaba un 70% en las ventas del año pasado, este año, en conjunto con el nuevo pilar D, deberán representarnos un:",
+       {
+        titulo:"¿Cual es la tribu de D by diesel?",
         opciones:[
-           {textoRespuesta:"10%", isCorrect: false},
-           {textoRespuesta:"25%", isCorrect: false},
-           {textoRespuesta:"75%", isCorrect: false},
-           {textoRespuesta:"50%", isCorrect: true},
+           {textoRespuesta:"Rebeldes y unicos", isCorrect: false},
+           {textoRespuesta:"Sostenible", isCorrect: false},
+           {textoRespuesta:"Creadores del cambio", isCorrect: true},
+           {textoRespuesta:"Iconos de la moda", isCorrect: false},
         ]
     },
      {
