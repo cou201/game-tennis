@@ -46,8 +46,22 @@ function App() {
               <span>
                 {" "}
                 Obtuviste {puntuación} de {preguntasDieselTrivia.length}{" "}            
-              </span><h4>cupon:DFEP5</h4>
-              <p className="tyc-juego-diesel">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae alias ipsam laudantium repellat id!</p>
+              </span><h4>cupón:DFEP5</h4>
+              <p className="tyc-juego-diesel">Para redimir tu premio sigue los siguientes pasos:
+<br/>
+1. Anota el cupón que te salió al ganar en el juego.
+<br/>
+2. Para que el premio se pueda redimir, debes realizar una compra de algún producto en nuestra tienda virtual de cualquier monto.
+<br/>
+3. Busca el producto que quieres llevar y añádelo al carrito de compras.
+<br/>
+4. Cuando ya tengas el producto listo en el carrito de compras, ingresa el cupón que te salió en la opción sumar cupón de descuento.
+<br/>
+5. Es responsabilidad del cliente ingresar el cupón de descuento para acceder al premio.
+<br/>
+6. En el resumen de compras, se verá reflejado el producto que escogiste y el premio que ganaste.
+<br/>
+7. Por último, debes realizar el pago y listo, tu premio llegará con tu compra.</p>
               <button onClick={() => (window.location.href = "/")}>
                 {" "}
                 Volver a jugar
@@ -60,7 +74,7 @@ function App() {
   }
 
   var puntiacionDos = puntuación
-  if(puntiacionDos >= 3 && puntiacionDos <= 5){
+  if(puntiacionDos >= 4 && puntiacionDos <= 5){
     if (isFinished){
       return (
           <main className="app">
@@ -68,8 +82,22 @@ function App() {
               <span>
                 {" "}
                 Obtuviste {puntuación} de {preguntasDieselTrivia.length}{" "}            
-              </span><h4>Cupon:DFEP4</h4>
-              <p className="tyc-juego-diesel">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae alias ipsam laudantium repellat id!</p>
+              </span><h4>cupón:DFEP4</h4>
+              <p className="tyc-juego-diesel">Para redimir tu premio sigue los siguientes pasos:
+<br/>
+1. Anota el cupón que te salió al ganar en el juego.
+<br/>
+2. Para que el premio se pueda redimir, debes realizar una compra de algún producto en nuestra tienda virtual de cualquier monto.
+<br/>
+3. Busca el producto que quieres llevar y añádelo al carrito de compras.
+<br/>
+4. Cuando ya tengas el producto listo en el carrito de compras, ingresa el cupón que te salió en la opción sumar cupón de descuento.
+<br/>
+5. Es responsabilidad del cliente ingresar el cupón de descuento para acceder al premio.
+<br/>
+6. En el resumen de compras, se verá reflejado el producto que escogiste y el premio que ganaste.
+<br/>
+7. Por último, debes realizar el pago y listo, tu premio llegará con tu compra.</p>
               <button onClick={() => (window.location.href = "/")}>
                 {" "}
                 Volver a jugar
@@ -89,8 +117,22 @@ function App() {
               <span>
                 {" "}
                 Obtuviste {puntuación} de {preguntasDieselTrivia.length}{" "}            
-              </span><h4>Cupon:DFEP3</h4>
-              <p className="tyc-juego-diesel">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae alias ipsam laudantium repellat id!.</p>
+              </span><h4>cupón:DFEP3</h4>
+              <p className="tyc-juego-diesel">Para redimir tu premio sigue los siguientes pasos:
+<br/>
+1. Anota el cupón que te salió al ganar en el juego.
+<br/>
+2. Para que el premio se pueda redimir, debes realizar una compra de algún producto en nuestra tienda virtual de cualquier monto.
+<br/>
+3. Busca el producto que quieres llevar y añádelo al carrito de compras.
+<br/>
+4. Cuando ya tengas el producto listo en el carrito de compras, ingresa el cupón que te salió en la opción sumar cupón de descuento.
+<br/>
+5. Es responsabilidad del cliente ingresar el cupón de descuento para acceder al premio.
+<br/>
+6. En el resumen de compras, se verá reflejado el producto que escogiste y el premio que ganaste.
+<br/>
+7. Por último, debes realizar el pago y listo, tu premio llegará con tu compra.</p>
               <button onClick={() => (window.location.href = "/")}>
                 {" "}
                 Volver a jugar
@@ -110,8 +152,22 @@ function App() {
               <span>
                 {" "}
                 Obtuviste {puntuación} de {preguntasDieselTrivia.length}{" "}            
-              </span><h4>Cupon:DFEP2</h4>
-              <p className="tyc-juego-diesel">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae alias ipsam laudantium repellat id!</p>
+              </span><h4>cupón:DFEP2</h4>
+              <p className="tyc-juego-diesel">Para redimir tu premio sigue los siguientes pasos:
+<br/>
+1. Anota el cupón que te salió al ganar en el juego.
+<br/>
+2. Para que el premio se pueda redimir, debes realizar una compra de algún producto en nuestra tienda virtual de cualquier monto.
+<br/>
+3. Busca el producto que quieres llevar y añádelo al carrito de compras.
+<br/>
+4. Cuando ya tengas el producto listo en el carrito de compras, ingresa el cupón que te salió en la opción sumar cupón de descuento.
+<br/>
+5. Es responsabilidad del cliente ingresar el cupón de descuento para acceder al premio.
+<br/>
+6. En el resumen de compras, se verá reflejado el producto que escogiste y el premio que ganaste.
+<br/>
+7. Por último, debes realizar el pago y listo, tu premio llegará con tu compra.</p>
               <button onClick={() => (window.location.href = "/")}>
                 {" "}
                 Volver a jugar
@@ -131,8 +187,22 @@ function App() {
               <span>
                 {" "}
                 Obtuviste {puntuación} de {preguntasDieselTrivia.length}{" "}            
-              </span><h4>Cupon:DFEP1</h4>
-              <p className="tyc-juego-diesel">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae alias ipsam laudantium repellat id!</p>
+              </span><h4>cupón:DFEP1</h4>
+              <p className="tyc-juego-diesel">Para redimir tu premio sigue los siguientes pasos:
+<br/>
+1. Anota el cupón que te salió al ganar en el juego.
+<br/>
+2. Para que el premio se pueda redimir, debes realizar una compra de algún producto en nuestra tienda virtual de cualquier monto.
+<br/>
+3. Busca el producto que quieres llevar y añádelo al carrito de compras.
+<br/>
+4. Cuando ya tengas el producto listo en el carrito de compras, ingresa el cupón que te salió en la opción sumar cupón de descuento.
+<br/>
+5. Es responsabilidad del cliente ingresar el cupón de descuento para acceder al premio.
+<br/>
+6. En el resumen de compras, se verá reflejado el producto que escogiste y el premio que ganaste.
+<br/>
+7. Por último, debes realizar el pago y listo, tu premio llegará con tu compra.</p>
               <button onClick={() => (window.location.href = "/")}>
                 {" "}
                 Volver a jugar
