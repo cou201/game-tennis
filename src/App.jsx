@@ -1,5 +1,6 @@
-import preguntasDieselTrivia from "./preguntas"; 
+import preguntastennisTrivia from "./preguntas";
 import { useState, useEffect } from "react";
+import "./global.css";
 
 function App() {
   const [preguntaActual, setPreguntaActual] = useState(0);
@@ -7,9 +8,7 @@ function App() {
   const [isFinished, setIsFinished] = useState(false);
   const [tiempoRestante, setTiempoRestante] = useState(40);
   const [areDisabled, setAreDisabled] = useState(false);
-  const [answersShown, setAnswersShown] = useState(false);
-
-
+  const [answersShown] = useState(false);
 
   function handleAnswerSubmit(isCorrect, e) {
     // añadir puntuación
@@ -19,7 +18,7 @@ function App() {
     // cambiar a la siguiente pregunta
 
     setTimeout(() => {
-      if (preguntaActual === preguntasDieselTrivia.length - 1) {
+      if (preguntaActual === preguntastennisTrivia.length - 1) {
         setIsFinished(true);
       } else {
         setPreguntaActual(preguntaActual + 1);
@@ -32,264 +31,217 @@ function App() {
     const intervalo = setInterval(() => {
       if (tiempoRestante > 0) setTiempoRestante((prev) => prev - 1);
       if (tiempoRestante === 0) setAreDisabled(true);
-    }, 1000);
+    }, 30000);
 
     return () => clearInterval(intervalo);
   }, [tiempoRestante]);
-
-  var puntiacionuno = puntuación
-  if(puntiacionuno <= 3){
-    if (isFinished){
+  var puntiacionuno = puntuación;
+  if (puntiacionuno <= 3) {
+    if (isFinished) {
       return (
-          <main className="app">
+        <>
+          <div>
+            <img src="./arquivos/neistometro.png" alt="imagen principal"></img>
+          </div>
+          <main className="contendor-principal-juego-cuestionario-tennis">
             <div className="juego-terminado">
               <span>
                 {" "}
-                Obtuviste {puntuación} de {preguntasDieselTrivia.length}{" "}            
-              </span><h4>cupón:DFEP5</h4>
-              <p className="tyc-juego-diesel">Para redimir tu premio sigue los siguientes pasos:
-<br/>
-1. Anota el cupón que te salió al ganar en el juego.
-<br/>
-2. Para que el premio se pueda redimir, debes realizar una compra de algún producto en nuestra tienda virtual de cualquier monto.
-<br/>
-3. Busca el producto que quieres llevar y añádelo al carrito de compras.
-<br/>
-4. Cuando ya tengas el producto listo en el carrito de compras, ingresa el cupón que te salió en la opción sumar cupón de descuento.
-<br/>
-5. Es responsabilidad del cliente ingresar el cupón de descuento para acceder al premio.
-<br/>
-6. En el resumen de compras, se verá reflejado el producto que escogiste y el premio que ganaste.
-<br/>
-7. Por último, debes realizar el pago y listo, tu premio llegará con tu compra.</p>
-              <button onClick={() => (window.location.href = "/")}>
+                Obtuviste {puntuación} de {preguntastennisTrivia.length}{" "}
+              </span>
+              <h4>Tu eres todo un rokero</h4>
+              <p className="tyc-juego-tennis">
+                Eres una persona llena de estilo mas clasico
+                <br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+                <br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+                <br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+                <br />
+              </p>
+              <button
+                onClick={() => (window.location.href = "/")}
+                className="boton-continuar-cuestionario"
+              >
                 {" "}
-                Volver a jugar
+                Ver los productos
               </button>
-          
             </div>
-          </main>
-        );
-      }
+          </main>{" "}
+        </>
+      );
+    }
   }
 
-  var puntiacionDos = puntuación
-  if(puntiacionDos >= 4 && puntiacionDos <= 5){
-    if (isFinished){
+  var puntiacionDos = puntuación;
+  if (puntiacionDos === 4) {
+    if (isFinished) {
       return (
-          <main className="app">
+        <>
+          <div>
+            <img src="./arquivos/neistometro.png" alt="imagen principal"></img>
+          </div>
+          <main className="contendor-principal-juego-cuestionario-tennis">
             <div className="juego-terminado">
               <span>
                 {" "}
-                Obtuviste {puntuación} de {preguntasDieselTrivia.length}{" "}            
-              </span><h4>cupón:DFEP4</h4>
-              <p className="tyc-juego-diesel">Para redimir tu premio sigue los siguientes pasos:
-<br/>
-1. Anota el cupón que te salió al ganar en el juego.
-<br/>
-2. Para que el premio se pueda redimir, debes realizar una compra de algún producto en nuestra tienda virtual de cualquier monto.
-<br/>
-3. Busca el producto que quieres llevar y añádelo al carrito de compras.
-<br/>
-4. Cuando ya tengas el producto listo en el carrito de compras, ingresa el cupón que te salió en la opción sumar cupón de descuento.
-<br/>
-5. Es responsabilidad del cliente ingresar el cupón de descuento para acceder al premio.
-<br/>
-6. En el resumen de compras, se verá reflejado el producto que escogiste y el premio que ganaste.
-<br/>
-7. Por último, debes realizar el pago y listo, tu premio llegará con tu compra.</p>
-              <button onClick={() => (window.location.href = "/")}>
+                Obtuviste {puntuación} de {preguntastennisTrivia.length}{" "}
+              </span>
+              <h4>Tu eres toda una Nea</h4>
+              <p className="tyc-juego-tennis">
+                Eres una persona llena de estilo mas clasico
+                <br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+                <br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+                <br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+                <br />
+              </p>
+              <button
+                onClick={() => (window.location.href = "/")}
+                className="boton-continuar-cuestionario"
+              >
                 {" "}
-                Volver a jugar
+                Ver los productos
               </button>
-        
             </div>
           </main>
-        );
-      }  
+        </>
+      );
+    }
   }
-  var puntiacionTres = puntuación
-  if(puntiacionTres >= 6 && puntiacionDos <= 7){
-    if (isFinished){
+  var puntiacionTres = puntuación;
+  if (puntiacionTres === 5) {
+    if (isFinished) {
       return (
-          <main className="app">
-            <div className="juego-terminado">
-              <span>
-                {" "}
-                Obtuviste {puntuación} de {preguntasDieselTrivia.length}{" "}            
-              </span><h4>cupón:DFEP3</h4>
-              <p className="tyc-juego-diesel">Para redimir tu premio sigue los siguientes pasos:
-<br/>
-1. Anota el cupón que te salió al ganar en el juego.
-<br/>
-2. Para que el premio se pueda redimir, debes realizar una compra de algún producto en nuestra tienda virtual de cualquier monto.
-<br/>
-3. Busca el producto que quieres llevar y añádelo al carrito de compras.
-<br/>
-4. Cuando ya tengas el producto listo en el carrito de compras, ingresa el cupón que te salió en la opción sumar cupón de descuento.
-<br/>
-5. Es responsabilidad del cliente ingresar el cupón de descuento para acceder al premio.
-<br/>
-6. En el resumen de compras, se verá reflejado el producto que escogiste y el premio que ganaste.
-<br/>
-7. Por último, debes realizar el pago y listo, tu premio llegará con tu compra.</p>
-              <button onClick={() => (window.location.href = "/")}>
-                {" "}
-                Volver a jugar
-              </button>
-      
-            </div>
-          </main>
-        );
-      }  
+        <main className="contendor-principal-juego-cuestionario-tennis">
+          <div className="juego-terminado">
+            <span>
+              {" "}
+              Obtuviste {puntuación} de {preguntastennisTrivia.length}{" "}
+            </span>
+            <h4>Tu eres todo un casual</h4>
+            <p className="tyc-juego-tennis">
+              Eres una persona llena de estilo mas clasico
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+              <br />
+            </p>
+            <button
+              onClick={() => (window.location.href = "/")}
+              className="boton-continuar-cuestionario"
+            >
+              {" "}
+              Ver los productos
+            </button>
+          </div>
+        </main>
+      );
+    }
   }
-  var puntiacionCuatro = puntuación
-  if(puntiacionCuatro >= 8 && puntiacionCuatro <= 9){
-    if (isFinished){
-      return (
-          <main className="app">
-            <div className="juego-terminado">
-              <span>
-                {" "}
-                Obtuviste {puntuación} de {preguntasDieselTrivia.length}{" "}            
-              </span><h4>cupón:DFEP2</h4>
-              <p className="tyc-juego-diesel">Para redimir tu premio sigue los siguientes pasos:
-<br/>
-1. Anota el cupón que te salió al ganar en el juego.
-<br/>
-2. Para que el premio se pueda redimir, debes realizar una compra de algún producto en nuestra tienda virtual de cualquier monto.
-<br/>
-3. Busca el producto que quieres llevar y añádelo al carrito de compras.
-<br/>
-4. Cuando ya tengas el producto listo en el carrito de compras, ingresa el cupón que te salió en la opción sumar cupón de descuento.
-<br/>
-5. Es responsabilidad del cliente ingresar el cupón de descuento para acceder al premio.
-<br/>
-6. En el resumen de compras, se verá reflejado el producto que escogiste y el premio que ganaste.
-<br/>
-7. Por último, debes realizar el pago y listo, tu premio llegará con tu compra.</p>
-              <button onClick={() => (window.location.href = "/")}>
-                {" "}
-                Volver a jugar
-              </button>
-           
-            </div>
-          </main>
-        );
-      }  
-  }
-  var puntiacionDiez = puntuación
-  if(puntiacionDiez  === 10){
-    if (isFinished){
-      return (
-          <main className="app">
-            <div className="juego-terminado">
-              <span>
-                {" "}
-                Obtuviste {puntuación} de {preguntasDieselTrivia.length}{" "}            
-              </span><h4>cupón:DFEP1</h4>
-              <p className="tyc-juego-diesel">Para redimir tu premio sigue los siguientes pasos:
-<br/>
-1. Anota el cupón que te salió al ganar en el juego.
-<br/>
-2. Para que el premio se pueda redimir, debes realizar una compra de algún producto en nuestra tienda virtual de cualquier monto.
-<br/>
-3. Busca el producto que quieres llevar y añádelo al carrito de compras.
-<br/>
-4. Cuando ya tengas el producto listo en el carrito de compras, ingresa el cupón que te salió en la opción sumar cupón de descuento.
-<br/>
-5. Es responsabilidad del cliente ingresar el cupón de descuento para acceder al premio.
-<br/>
-6. En el resumen de compras, se verá reflejado el producto que escogiste y el premio que ganaste.
-<br/>
-7. Por último, debes realizar el pago y listo, tu premio llegará con tu compra.</p>
-              <button onClick={() => (window.location.href = "/")}>
-                {" "}
-                Volver a jugar
-              </button>
-             
-            </div>
-          </main>
-        );
-      }  
-  }
+
   if (answersShown)
     return (
-      <main className="app">
-        <div className="lado-izquierdo">
-          <div className="numero-pregunta">
-            <span> Pregunta {preguntaActual + 1} de</span> {preguntasDieselTrivia.length}
-          </div>
-          <div className="titulo-pregunta">
-            {preguntasDieselTrivia[preguntaActual].titulo}
-          </div>
-          <div>
-            {
-              preguntasDieselTrivia[preguntaActual].opciones.filter(
-                (opcion) => opcion.isCorrect
-              )[0].textoRespuesta
-            }
-          </div>
-          <button
-            onClick={() => {
-              if (preguntaActual === preguntasDieselTrivia.length - 1) {
-                window.location.href = "/";
-              } else {
-                setPreguntaActual(preguntaActual + 1);
-              }
-            }}
-          >
-            {preguntaActual === preguntasDieselTrivia.length - 1
-              ? "Volver a jugar"
-              : "Siguiente"}
-          </button>
-        </div>
-      </main>
-    );
-
-  return (
-    <main className="app">
-      <div className="lado-izquierdo">
-        <div className="numero-pregunta">
-          <span> Pregunta {preguntaActual + 1} de</span> {preguntasDieselTrivia.length}
-        </div>
-        <div className="titulo-pregunta">
-          {preguntasDieselTrivia[preguntaActual].titulo}
-        </div>
+      <>
         <div>
-          {!areDisabled ? (
-            <span className="tiempo-restante">
-              Tiempo restante: {tiempoRestante}{" "}
-            </span>
-          ) : (
+          <img src="./arquivos/neistometro.png" alt="imagen principal"></img>
+        </div>
+        <main className="contendor-principal-juego-cuestionario-tennis">
+          <div className="imagen-cuestionario-tennis">
+            <div className="lado-izquierdo"></div>
+            <div className="numero-pregunta">
+              <span> Pregunta {preguntaActual + 1} de</span>{" "}
+              {preguntastennisTrivia.length}
+            </div>
+            <div className="titulo-pregunta">
+              {preguntastennisTrivia[preguntaActual].titulo}
+            </div>
+            <div>
+              {
+                preguntastennisTrivia[preguntaActual].opciones.filter(
+                  (opcion) => opcion.isCorrect
+                )[0].textoRespuesta
+              }
+            </div>
             <button
               onClick={() => {
-                setTiempoRestante(10);
-                setAreDisabled(false);
-                if (preguntaActual === preguntasDieselTrivia.length - 1) {
-                  setIsFinished(true);
+                if (preguntaActual === preguntastennisTrivia.length - 1) {
+                  window.location.href = "/";
                 } else {
                   setPreguntaActual(preguntaActual + 1);
                 }
               }}
+              className="boton-continuar-cuestionario"
             >
-              Continuar
+              {preguntaActual === preguntastennisTrivia.length - 1
+                ? "Ver los productos"
+                : "Siguiente"}
             </button>
-          )}
+          </div>
+        </main>
+      </>
+    );
+
+  return (
+    <>
+      <div className="imagen-principal-tennis-cuestionario">
+        <img
+          src="https://tennis.vtexassets.com/assets/vtex.file-manager-graphql/images/ec1508cb-2bf8-4dbe-8211-33e33fa6444d___aa29dd82c7e8875995264021213ec236.svg"
+          alt="imagen principal"
+        ></img>
+      </div>
+      <main className="contendor-principal-juego-cuestionario-tennis">
+        <div className="lado-izquierdo">
+          <div className="numero-pregunta">
+            <span> Pregunta {preguntaActual + 1} de</span>{" "}
+            {preguntastennisTrivia.length}
+          </div>
+          <div className="titulo-pregunta">
+            {preguntastennisTrivia[preguntaActual].titulo}
+          </div>
+          <div>
+            {!areDisabled ? (
+              <span className="tiempo-restante">
+                Tiempo restante: {tiempoRestante}{" "}
+              </span>
+            ) : (
+              <button
+                onClick={() => {
+                  setTiempoRestante(10);
+                  setAreDisabled(false);
+                  if (preguntaActual === preguntastennisTrivia.length - 1) {
+                    setIsFinished(true);
+                  } else {
+                    setPreguntaActual(preguntaActual + 1);
+                  }
+                }}
+                className="boton-continuar-cuestionario"
+              >
+                Continuar
+              </button>
+            )}
+          </div>
         </div>
-      </div>
-      <div className="lado-derecho">
-        {preguntasDieselTrivia[preguntaActual].opciones.map((respuesta) => (
-          <button
-            disabled={areDisabled}
-            key={respuesta.textoRespuesta}
-            onClick={(e) => handleAnswerSubmit(respuesta.isCorrect, e)}
-          >
-            {respuesta.textoRespuesta}
-          </button>
-        ))}
-      </div>
-    </main>
+        <div className="lado-derecho">
+          {preguntastennisTrivia[preguntaActual].opciones.map((respuesta) => (
+            <button
+              disabled={areDisabled}
+              key={respuesta.textoRespuesta}
+              onClick={(e) => handleAnswerSubmit(respuesta.isCorrect, e)}
+              className="boton-continuar-cuestionario"
+            >
+              {respuesta.textoRespuesta}
+            </button>
+          ))}
+        </div>
+      </main>
+    </>
   );
 }
 

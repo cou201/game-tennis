@@ -1,128 +1,187 @@
-* {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+body {
+  margin: 0;
+  color: black;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 2000 2000"><g><g fill="hsl(43, 97%, 49%)" id="star"><path d="M 500 500 C 1000 1000 1000 1000 1930.0699300699303 -45.45454545454561 C 1000 1000 1000 1000 1500 1500 C 1000 1000 1000 1000 500 1500 C 1000 1000 1000 1000 500 500" stroke-linecap="round" stroke-linejoin="round"></path></g></g></svg>');
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  align-items: center;
+  min-height: 100vh;
+}
+.tyc-juego-tennis {
+  text-align: center;
+}
+.contendor-principal-juego-cuestionario-tennis {
+  background-color: rgba(76, 204, 255, 0.3);
+  max-width: 650px;
+  min-width: 450px;
+  height: min-content;
+  min-height: 200px;
+  border-radius: 15px;
+  border: 2px solid black;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(15, 13, 13, 0.75);
+  display: flex;
+  justify-content: space-evenly;
+  backdrop-filter: blur(18px) saturate(200%);
+  -webkit-backdrop-filter: blur(18px) saturate(200%);
+  background-color: rgba(17, 25, 40, 0.27);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+@media (max-width: 768px) {
+  .contendor-principal-juego-cuestionario-tennis {
+    min-width: 120px !important;
+    display: flex;
+    position: relative;
+    left: 0px;
   }
-  
-  body {
-    margin: 0;
-    color: #fff;
-    background-color: #fcfcfc;
+}
+
+/* PREGUNTAS */
+.lado-izquierdo {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.pregunta-numero {
+  margin-bottom: 20px;
+}
+
+.pregunta-numero span {
+  font-size: 28px;
+}
+.titulo-pregunta {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.pregunta-titulo {
+  margin-bottom: 12px;
+}
+
+.lado-derecho {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* FINALIZADO */
+.juego-terminado {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 24px;
+  align-items: center;
+}
+
+/* GRAL */
+.boton-continuar-cuestionario {
+  display: inline-block;
+  padding: 0.6rem 0.8rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  border: 2px solid rgb(22, 29, 36);
+  cursor: pointer;
+  position: relative;
+  background-color: #572626;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.boton-continuar-cuestionario::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  transform: translateX(-100%);
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.boton-continuar-cuestionario:hover::before {
+  transform: translateX(0);
+}
+
+.tiempo-restante {
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.correct,
+.correct:hover {
+  background-color: #000;
+}
+
+.incorrect,
+.incorrect:hover {
+  background-color: #000;
+}
+
+.btns-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.boton-continuar-cuestionario:hover {
+  background-color: #0c0c0c;
+}
+
+.boton-continuar-cuestionario[disabled] {
+  background-color: #555e7d;
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+.boton-continuar-cuestionario:focus {
+  outline: none;
+}
+
+.boton-ver-productos-formulario {
+  width: 20%;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #252d4a;
+  border-radius: 15px;
+  display: flex;
+  padding: 5px;
+  justify-content: flex-start;
+  align-items: center;
+  border: 5px solid #234668;
+  cursor: pointer;
+  text-align: center;
+}
+
+.imagen-cuestionario-tennis img {
+  width: 100%;
+}
+
+.imagen-principal-tennis-cuestionario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .imagen-principal-tennis-cuestionario {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-  }
-  .tyc-juego-diesel{
-    text-align: center;
-  }
-  .app {
-    background-color: #252d4a;
-    max-width: 650px;
-    min-width: 450px;
-    height: min-content;
-    min-height: 200px;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  @media(max-width:768px){
-    .app{
-      min-width:120px !important;
-      display:flex;
-      position: relative;
-      left: 0px;
-    }
-  }
-  
-  /* PREGUNTAS */
-  .lado-izquierdo {
     width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
   }
-  
-  .pregunta-numero {
-    margin-bottom: 20px;
-  }
-  
-  .pregunta-numero span {
-    font-size: 28px;
-  }
-  
-  .pregunta-titulo {
-    margin-bottom: 12px;
-  }
-  
-  .lado-derecho {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  /* FINALIZADO */
-  .juego-terminado {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    font-size: 24px;
-    align-items: center;
-  }
-  
-  /* GRAL */
-  button {
-    width: 100%;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #252d4a;
-    border-radius: 15px;
-    display: flex;
-    padding: 5px;
-    justify-content: flex-start;
-    align-items: center;
-    border: 5px solid #234668;
-    cursor: pointer;
-  }
-  
-  .tiempo-restante {
-    font-size: 14px;
-    color: #fcbf3d;
-    margin-bottom: 20px;
-  }
-  
-  .correct,
-  .correct:hover {
-    background-color: #2f922f;
-  }
-  
-  .incorrect,
-  .incorrect:hover {
-    background-color: #ff3333;
-  }
-  
-  .btns-container {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  
-  button:hover {
-    background-color: #234668;
-  }
-  
-  button[disabled] {
-    background-color: #555e7d;
-    color: #ffffff;
-    cursor: not-allowed;
-  }
-  
-  button:focus {
-    outline: none;
-  }
-  
-  button svg {
-    margin-right: 5px;
-  }
+}
