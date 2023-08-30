@@ -40,15 +40,8 @@ function App() {
     if (isFinished) {
       return (
         <>
-          <div>
-            <img src="./arquivos/neistometro.png" alt="imagen principal"></img>
-          </div>
           <main className="contendor-principal-juego-cuestionario-tennis">
             <div className="juego-terminado">
-              <span>
-                {" "}
-                Obtuviste {puntuación} de {preguntastennisTrivia.length}{" "}
-              </span>
               <h4>Tu eres todo un rokero</h4>
               <p className="tyc-juego-tennis">
                 Eres una persona llena de estilo mas clasico
@@ -79,15 +72,8 @@ function App() {
     if (isFinished) {
       return (
         <>
-          <div>
-            <img src="./arquivos/neistometro.png" alt="imagen principal"></img>
-          </div>
           <main className="contendor-principal-juego-cuestionario-tennis">
             <div className="juego-terminado">
-              <span>
-                {" "}
-                Obtuviste {puntuación} de {preguntastennisTrivia.length}{" "}
-              </span>
               <h4>Tu eres toda una Nea</h4>
               <p className="tyc-juego-tennis">
                 Eres una persona llena de estilo mas clasico
@@ -118,10 +104,6 @@ function App() {
       return (
         <main className="contendor-principal-juego-cuestionario-tennis">
           <div className="juego-terminado">
-            <span>
-              {" "}
-              Obtuviste {puntuación} de {preguntastennisTrivia.length}{" "}
-            </span>
             <h4>Tu eres todo un casual</h4>
             <p className="tyc-juego-tennis">
               Eres una persona llena de estilo mas clasico
@@ -149,9 +131,6 @@ function App() {
   if (answersShown)
     return (
       <>
-        <div>
-          <img src="./arquivos/neistometro.png" alt="imagen principal"></img>
-        </div>
         <main className="contendor-principal-juego-cuestionario-tennis">
           <div className="imagen-cuestionario-tennis">
             <div className="lado-izquierdo"></div>
@@ -190,6 +169,9 @@ function App() {
 
   return (
     <>
+      <div className="titulo-regalo-ideal-cuestionario-tennis">
+        <h1>EL REGALO IDEAL</h1>
+      </div>
       <div className="imagen-principal-tennis-cuestionario">
         <img
           src="https://tennis.vtexassets.com/assets/vtex.file-manager-graphql/images/ec1508cb-2bf8-4dbe-8211-33e33fa6444d___aa29dd82c7e8875995264021213ec236.svg"
